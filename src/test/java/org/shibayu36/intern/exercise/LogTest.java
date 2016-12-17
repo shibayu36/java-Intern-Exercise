@@ -1,5 +1,6 @@
-import org.junit.Test;
+package org.shibayu36.intern.exercise;
 
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**

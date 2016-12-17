@@ -1,3 +1,4 @@
+package org.shibayu36.intern.exercise;
 /**
  * Created by shibayu36 on 2016/12/17.
  */
