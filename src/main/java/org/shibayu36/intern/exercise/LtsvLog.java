@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-public class Log {
+public class LtsvLog {
     public String host;
     public String user;
     public int epoch;
@@ -17,7 +17,7 @@ public class Log {
     public int size;
     public String referer;
 
-    public Log(String host, String user, int epoch, String req, int status, int size, String referer) {
+    public LtsvLog(String host, String user, int epoch, String req, int status, int size, String referer) {
         this.host = host;
         this.user = user;
         this.epoch = epoch;

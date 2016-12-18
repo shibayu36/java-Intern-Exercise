@@ -6,10 +6,10 @@ import static org.junit.Assert.*;
 /**
  * Created by shibayu36 on 2016/12/17.
  */
-public class LogTest {
+public class LtsvLogTest {
     @Test
     public void testLog() throws Exception {
-        Log log = new Log(
+        LtsvLog log = new LtsvLog(
                 "127.0.0.1",
                 "frank",
                 1372694390,
