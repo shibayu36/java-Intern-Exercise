@@ -21,18 +21,16 @@ public class LtsvParser {
             throw new LtsvIOException();
         }
 
-        try {
-            return lines.stream().map(line -> lineToLog(line)).collect(Collectors.toList());
-        }
-        catch (Exception e) {
-            throw new LtsvParseException();
-        }
+        return lines.stream().map(line -> lineToLog(line)).collect(Collectors.toList());
     }
 
     private static LtsvLog lineToLog(String line) {
         Map<String, String> logMap = new HashMap<>();
         for (String field : line.split("\t")) {
             String[] kv = field.split(":", 2);
+            if (kv.length != 2) {
+                throw new LtsvParseException();
+            }
             logMap.put(kv[0], kv[1]);
         }
 
