@@ -16,12 +16,10 @@ public class LtsvParser {
     public static List<LtsvLog> parse(String filePath) {
         List<String> lines;
         try (Stream<String> stream = Files.lines(Paths.get(filePath))) {
-            lines = stream.collect(Collectors.toList());
+            return stream.map(line -> lineToLog(line)).collect(Collectors.toList());
         } catch (IOException e) {
             throw new LtsvIOException();
         }
-
-        return lines.stream().map(line -> lineToLog(line)).collect(Collectors.toList());
     }
 
     private static LtsvLog lineToLog(String line) {
